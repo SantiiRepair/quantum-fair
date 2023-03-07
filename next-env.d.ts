@@ -9,4 +9,5 @@ declare global {
   interface Window {
     ethereum: MetaMaskInpageProvider;
   }
+ jazzicon?: any
 }
