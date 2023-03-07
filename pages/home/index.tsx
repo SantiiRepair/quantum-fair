@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import {̣ Flex } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 
-function Home() {
+function Body() {
     return (
         <Flex>
-            
+            <a>h</a>
         </Flex>
     )
 }
 
-export default Home
+export default Body

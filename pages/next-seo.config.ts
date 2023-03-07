@@ -1,4 +1,4 @@
-import { DefaultSeoProps } from 'next-seo'
+/* import { DefaultSeoProps } from 'next-seo'
 
 export const SEO: DefaultSeoProps = {
   titleTemplate: '%s | Quantum Fair',
@@ -16,4 +16,6 @@ export const SEO: DefaultSeoProps = {
       'Quantum Fair create a raffle and share with your friends, start now.',
     images: [{ url: 'https://' }],
   },
-}
+} */
+
+export {}
