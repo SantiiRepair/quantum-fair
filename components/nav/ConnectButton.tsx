@@ -24,7 +24,7 @@ export default function ConnectButton({ handleOpenModal }: Props) {
     >
       <Box px="3">
         <Text color="white" fontSize="md">
-          BSC
+          GOERLI
         </Text>
       </Box>
       <Button
@@ -55,9 +55,10 @@ export default function ConnectButton({ handleOpenModal }: Props) {
   ) : (
     <Button
       onClick={handleConnectWallet}
-      bg="blue.800"
+      transform='translateX(500px)'
+      bg="#959292"
       mb='3'
-      color="blue.300"
+      color="#000000"
       fontSize="lg"
       fontWeight="medium"
       borderRadius="xl"
@@ -71,7 +72,7 @@ export default function ConnectButton({ handleOpenModal }: Props) {
         borderColor: "blue.700",
       }}
     >
-      Connect Wallet
+      Connect
     </Button>
   );
 }

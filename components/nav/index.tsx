@@ -10,10 +10,10 @@ function Navbar() {
   return ( 
 
     <> 
-      <ChakraProvider theme={theme}>
+     <ChakraProvider theme={theme}>
        <Layout>
         <ConnectButton handleOpenModal={onOpen} />
-        <AccountModal isOpen={isOpen} onClose={onClose} />-   
+        <AccountModal isOpen={isOpen} onClose={onClose} />
        </Layout>
      </ChakraProvider>
     </> 
