@@ -1,6 +1,6 @@
 import Head from "next/head"
 import Navbar from "../../components/nav"
-import Mock from "./board"
+import Mock from "../../components/board"
 
 function Heading() {
   return (
