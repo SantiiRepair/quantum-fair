@@ -57,10 +57,9 @@ export default function ConnectButton({ handleOpenModal }: Props) {
       onClick={handleConnectWallet}
       bg="#666464"
       color="#000000"
-      h='35px'
-      fontSize="16px"
-      fontWeight="medium"
-      maxWidth='95px'
+      h='38px'
+      fontSize="18px"
+      minWidth='100px'
       borderRadius="13px"
       border="1px solid transparent"
       _hover={{
