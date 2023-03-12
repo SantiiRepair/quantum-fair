@@ -1,9 +1,10 @@
 import React,{ useState } from 'react'
+import { Link } from "@chakra-ui/react"
 import styled, { keyframes } from 'styled-components'
 import { FaBars } from 'react-icons/fa'
-import { useDisclosure } from "@chakra-ui/react";
-import ConnectButton from "./ConnectButton";
-import AccountModal from "./AccountModal";
+import { useDisclosure } from "@chakra-ui/react"
+import ConnectButton from "./ConnectButton"
+import AccountModal from "./AccountModal"
 
 export default function Layout() {
 
@@ -26,6 +27,7 @@ const translate = keyframes`
 `
 
 const Nav = styled.nav`
+  align-items: center;
   background: #efefef;
   height: 65px; 
   display: flex; 
@@ -159,10 +161,12 @@ const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Nav> 
         <Bars onClick={ Active } />
+        <Link href='/'>
         <BG>
           <img alt='Logo' src={Lago} width='30'/>
           <Typography>QuantumFair</Typography>
         </BG>
+        </Link>
         <NavMenu>  
          <NavData href='/create'>Create Raffle</NavData> 
          <NavData href='/board'>Raffle Board</NavData>
