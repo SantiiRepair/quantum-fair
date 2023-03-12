@@ -162,7 +162,7 @@ const { isOpen, onOpen, onClose } = useDisclosure();
     <Nav> 
         <Bars onClick={ Active } />
         <BG>
-          <Imag alt='Logo' src={Lago} width='30'/>
+          <Image alt='Lago' src={Lago} height='30' width='30'/>
           <Typography href='/'>QuantumFair</Typography>
         </BG>
         <NavMenu>  
