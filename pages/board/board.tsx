@@ -59,7 +59,7 @@ const Button = styled.button`
   background: #edd8d8;
   border: none;
   margin-left: 10px;
-    align-items: center;
+  align-items: center;
   border-radius: 10px;
   color: #000000;
   margin-top: 2%;
