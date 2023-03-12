@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import Head from "next/head"
 import Navbar from "../../components/nav"
 import Mock from "./board"
-=======
-import Head from "next/head";
-import Navbar from "../../components/nav"
-import styled from 'styled-components'
->>>>>>> fc6f57c1f3a78d1ba7e13394dfc60be34003adca
 
 function Heading() {
   return (
@@ -24,14 +18,9 @@ function Heading() {
 function Board() {
     return (
   <>
-<<<<<<< HEAD
     <Heading />
     <Navbar />  
-    <Mock />  
-=======
-    <Heading/>
-    <Navbar />    
->>>>>>> fc6f57c1f3a78d1ba7e13394dfc60be34003adca
+    <Mock />     
   </>
  )
 }
