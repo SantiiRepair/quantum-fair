@@ -1,5 +1,5 @@
 import React,{ useState } from 'react'
-import { Link } from "@chakra-ui/react"
+import Image from "next/image"
 import styled, { keyframes } from 'styled-components'
 import { FaBars } from 'react-icons/fa'
 import { useDisclosure } from "@chakra-ui/react"
@@ -92,7 +92,7 @@ const NavJot = styled.li`
  }
 `
 
-const Typography = styled.h1`
+const Typography = styled.a`
   color: #000000;
   margin-left: 10px;
   font-size: medium;
@@ -161,12 +161,10 @@ const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Nav> 
         <Bars onClick={ Active } />
-        <Link href='/'>
         <BG>
-          <img alt='Logo' src={Lago} width='30'/>
-          <Typography>QuantumFair</Typography>
+          <Imag alt='Logo' src={Lago} width='30'/>
+          <Typography href='/'>QuantumFair</Typography>
         </BG>
-        </Link>
         <NavMenu>  
          <NavData href='/create'>Create Raffle</NavData> 
          <NavData href='/board'>Raffle Board</NavData>
