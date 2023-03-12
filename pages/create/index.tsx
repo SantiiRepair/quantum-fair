@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Flex } from '@chakra-ui/react'
 
-function Body() {
+function Create() {
     return (
         <Flex>
             <a>h</a>
@@ -9,4 +9,4 @@ function Body() {
     )
 }
 
-export default Body
+export default Create

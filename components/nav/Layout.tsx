@@ -1,14 +1,12 @@
-import { ReactNode } from "react";
 import React,{ useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { FaBars } from 'react-icons/fa'
+import { useDisclosure } from "@chakra-ui/react";
+import ConnectButton from "./ConnectButton";
+import AccountModal from "./AccountModal";
 
-type Props = {
-  children?: ReactNode;
-};
+export default function Layout() {
 
-export default function Layout({ children }: Props) {
-  
 const [bool, setBool] = useState('none')
 const Lago = 'https://i.ibb.co/xJxBBbv/QF-Media-kit-ref.png'
 
@@ -28,7 +26,8 @@ const translate = keyframes`
 `
 
 const Nav = styled.nav`
-  height: 45px; 
+  background: #efefef;
+  height: 65px; 
   display: flex; 
   align-content: center; 
   justify-content: space-between; 
@@ -38,9 +37,12 @@ const Nav = styled.nav`
 
 
 const BG = styled.div`
-  margin-top: 0.7%; 
+
+  display: flex;
+  align-items: center; 
     @media screen and (max-width: 768px) { 
-    display: none; 
+    display: flex; 
+    margin-left: 10px;
   } 
 `
 
@@ -56,9 +58,8 @@ const LG = styled.div`
 
   
 const NavData = styled.a` 
-  transform: translateX(300px);
   color: #000000; 
-  font-size: large;
+  font-size: medium;
   display: flex; 
   align-items: center; 
   text-decoration: none; 
@@ -87,6 +88,13 @@ const NavJot = styled.li`
     font-size: 1.5rem; 
     cursor: pointer; 
  }
+`
+
+const Typography = styled.h1`
+  color: #000000;
+  margin-left: 10px;
+  font-size: medium;
+  font-family: 'Poppins';
 `
 
 
@@ -129,30 +137,44 @@ const NavMenu = styled.div`
   } 
 `
 
-  function Link1() {
+const NavBtn = styled.nav` 
+  display: flex; 
+  align-items: center; 
+  margin-right: 24px; 
+  @media screen and (max-width: 768px) { 
+    display: none; 
+  } 
+`
+
+function Link1() {
    window.open('https://bit.ly/chatgpt-whatsapp');
-  }
+}
 
-  function Link2() {
+function Link2() {
    window.open('https://');
-  }
-
-  function Link3() {
-   window.open('https://dsc.gg/turing');
-  }
-
-  function Contact() {
-   window.open('https://');
-  }
+}
+ 
+const { isOpen, onOpen, onClose } = useDisclosure();
   
   return (
     <Nav> 
-      <BG>
-      <img alt='Logo' src={Lago} width='30'/>
-      </BG>
-      <NavData href='https://bit.ly/chatgpt-whatsapp'>Create Raffle</NavData> 
-      <NavData href='https://t.me/'>Raffle Board</NavData>
-      {children}
-    </Nav>
+        <Bars onClick={ Active } />
+        <BG>
+          <img alt='Logo' src={Lago} width='30'/>
+          <Typography>QuantumFair</Typography>
+        </BG>
+        <NavMenu>  
+         <NavData href='/create'>Create Raffle</NavData> 
+         <NavData href='/board'>Raffle Board</NavData>
+        </NavMenu> 
+        <NavBtn> 
+         <ConnectButton handleOpenModal={onOpen} />
+         <AccountModal isOpen={isOpen} onClose={onClose} />
+        </NavBtn> 
+     <NavActive>
+          <NavJot>Create Raffle</NavJot> 
+          <NavJot>Raffle Board</NavJot> 
+     </NavActive>
+    </Nav> 
   );
 }

@@ -1,7 +1,15 @@
 import Head from "next/head";
 import { Body } from './home'
 import Navbar from "../components/nav";
-import { Flex } from "@chakra-ui/react";
+import styled from 'styled-components'
+
+const Hr = styled.hr`
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-top: 3px solid;
+  border-color: transparent;
+`
 
 function Heading() {
   return (
@@ -20,10 +28,8 @@ export default function App() {
   return (
   <>
   <Heading/>
-    <Flex h="100vh" bg="#efefef">    
-      <Navbar /> 
-      <hr/>
-    </Flex>
+  <Navbar />    
+  <Hr/>
   </>  
   );
 }
