@@ -1,10 +1,10 @@
 import Head from "next/head";
-import { Body } from './home'
 import Navbar from "../components/nav";
 import styled from 'styled-components'
 
 const Hr = styled.hr`
   top: 0;
+  transform: translateY(-10px);
   bottom: 0;
   background-color: #fff;
   border-top: 3px solid;
