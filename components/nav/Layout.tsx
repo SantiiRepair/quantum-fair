@@ -9,7 +9,8 @@ import AccountModal from "./AccountModal"
 export default function Layout() {
 
 const [bool, setBool] = useState('none')
-const Lago = 'https://i.ibb.co/xJxBBbv/QF-Media-kit-ref.png'
+
+const src = 'https://i.ibb.co/xJxBBbv/QF-Media-kit-ref.png'
 
  function Active() {
     setBool('flex')
@@ -95,6 +96,7 @@ const NavJot = styled.li`
 const Typography = styled.a`
   color: #000000;
   margin-left: 10px;
+  text-decoration: none; 
   font-size: medium;
   font-family: 'Poppins';
 `
@@ -162,7 +164,7 @@ const { isOpen, onOpen, onClose } = useDisclosure();
     <Nav> 
         <Bars onClick={ Active } />
         <BG>
-          <Image alt='Lago' src={Lago} height='30' width='30'/>
+          <Image loader={() => src} alt='Lago' src={src} height='30' width='30'/>
           <Typography href='/'>QuantumFair</Typography>
         </BG>
         <NavMenu>  
